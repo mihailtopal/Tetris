@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css.css" />
+    <title>Tetris</title>
+  </head>
+  <body>
+    <h1>Tetris</h1>
+    <div style="z-index: 1">
+      <div class="bts">
+        <button class="start" onclick="startGame()">Start</button>
+        <button class="stop" onclick="stopGame()">Stop</button>
+      </div>
+
+      <div class="pole">
+        <p style="font-size: 30px" class="score">
+          Next tetromino:
+          <span id="next-piece"></span>Score: <span id="scoreValue"></span> Best
+          score: <span id="bestScoreValue"></span>
+        </p>
+
+        <div class="game-container">
+          <!-- Игровое поле с ячейками -->
+          <div id="game-board"></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="gameOverModal" class="modal">
+      <div class="modal-content">
+        <h2>Game Over</h2>
+        <p class="scoreModal">Score:<span id="scoreValueModal"></span></p>
+
+        <span class="close" onclick="closeModal()"
+          ><button class="stop">Close</button></span
+        >
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
